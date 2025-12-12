@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+-<!- -
+Image Interpreter-a-nator
+Nina Jones, November, 2025
+Dis: Drag and drop interface that uses a tensorflow ro determine the subject of an image.
+Credits:
+Public Domain images from publicdomainpictures.net
+
+- ->
+<html>
+<head>
+  <title>Detect Image Subject</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.14.0/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@2.1.0"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="content">
+<h1>Image Interpreter-a-nator</h1>
+<div id="dropzone">Drop image here or click to browse</div>
+<input type="file" id="imageInput" accept="image/*" style="display:none;">
+<img id="preview" width="500" style="display:none; margin-top:10px;">
+<p id="result">Loading model ... </p>
+<div id="progressContainer"><div id="progressBar"></div></div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
